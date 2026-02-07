@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@layer base {
+    :root {
+        --color-bg-primary: #0f172a;
+        --color-bg-secondary: #1e293b;
+        --color-text-primary: #f8fafc;
+        --color-text-secondary: #cbd5e1;
+        --color-accent: #f43f5e;
+        --color-accent-hover: #e11d48;
+        --font-outfit: 'Outfit', sans-serif;
+    }
+
+    body {
+        @apply bg-slate-900 text-slate-50 font-sans;
+        background-image:
+            radial-gradient(circle at 15% 50%, rgba(244, 63, 94, 0.1), transparent 25%),
+            radial-gradient(circle at 85% 30%, rgba(99, 102, 241, 0.1), transparent 25%);
+        background-attachment: fixed;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.4s ease-out forwards;
+}
