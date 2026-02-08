@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const bcrypt = require("bcryptjs");
+const bcrypt = require("bcryptjs"); // Kept for potential future use or if other parts import it, though not used here anymore.
 
 const studentSchema = new mongoose.Schema({
     name: {
@@ -34,17 +34,6 @@ const studentSchema = new mongoose.Schema({
     },
 });
 
-// Pre-save hook to hash password if modified
-studentSchema.pre('save', async function (next) {
-    if (!this.isModified('password')) return next();
-
-    try {
-        const salt = await bcrypt.genSalt(10);
-        this.password = await bcrypt.hash(this.password, salt);
-        next();
-    } catch (error) {
-        next(error);
-    }
-});
+// Pre-save hook removed as per user request to store passwords in plain text
 
 module.exports = mongoose.model("Student", studentSchema);

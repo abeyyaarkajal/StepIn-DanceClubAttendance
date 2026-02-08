@@ -31,8 +31,8 @@ router.post('/login', async (req, res) => {
                 return res.status(404).json({ error: 'Student not found' });
             }
 
-            const isMatch = await bcrypt.compare(password, student.password);
-            if (!isMatch) {
+            // Direct password comparison (Plain text)
+            if (password !== student.password) {
                 return res.status(401).json({ error: 'Invalid password' });
             }
 
