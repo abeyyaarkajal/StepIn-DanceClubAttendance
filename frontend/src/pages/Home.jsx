@@ -69,11 +69,11 @@ const Home = () => {
                             </div>
 
                             <blockquote className="text-xl text-slate-300 font-medium italic">
-                                "We built StepIn with a simple mission: to make the mundane task of attendance tracking a delightful experience. Every pixel is crafted with care, just for you."
+                                "I built StepIn with a simple mission: to make the mundane task of attendance tracking a delightful experience. Every pixel is crafted with care, just for you."
                             </blockquote>
 
                             <div>
-                                <h4 className="text-lg font-bold text-white">Kajal</h4>
+                                <h4 className="text-lg font-bold text-white">Kajal Kukreja</h4>
                                 <p className="text-rose-500 text-sm font-medium">Lead Developer & Designer</p>
                             </div>
                         </div>
